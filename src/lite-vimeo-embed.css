@@ -43,8 +43,8 @@ lite-vimeo > iframe {
 
 /* play button */
 lite-vimeo > .ltv-playbtn {
-	width: 6.5em;
-	height: 4em;
+	width: 65px;
+	height: 40px;
 	background: rgba(23, 35, 34, 0.75);
 	z-index: 1;
 	opacity: 0.8;
