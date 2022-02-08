@@ -1,29 +1,29 @@
 {
-  "name": "lite-youtube-embed",
-  "version": "0.2.0",
-  "description": "A faster youtube embed.",
-  "license": "Apache-2.0",
-  "main": "src/lite-yt-embed.js",
-  "style": "src/lite-yt-embed.css",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/paulirish/lite-youtube-embed.git"
-  },
-  "keywords": [
-    "youtube",
-    "custom element",
-    "web component"
-  ],
-  "author": "Paul Irish",
-  "bugs": {
-    "url": "https://github.com/paulirish/lite-youtube-embed/issues"
-  },
-  "homepage": "https://github.com/paulirish/lite-youtube-embed#readme",
-  "readme": "readme.md",
-  "files": [
-    "src/**",
-    "package.json",
-    "package-lock.json",
-    "readme.md"
-  ]
+	"name": "lite-vimeo-embed",
+	"version": "0.2.0",
+	"description": "A faster vimeo embed.",
+	"license": "Apache-2.0",
+	"main": "src/lite-vimeo-embed.js",
+	"style": "src/lite-vimeo-embed.css",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/samuelbirch/lite-vimeo-embed.git"
+	},
+	"keywords": [
+		"vimeo",
+		"custom element",
+		"web component"
+	],
+	"author": "Samuel Birch",
+	"bugs": {
+		"url": "https://github.com/samuelbirch/lite-vimeo-embed/issues"
+	},
+	"homepage": "https://github.com/samuelbirch/lite-vimeo-embed#readme",
+	"readme": "readme.md",
+	"files": [
+		"src/**",
+		"package.json",
+		"package-lock.json",
+		"readme.md"
+	]
 }
