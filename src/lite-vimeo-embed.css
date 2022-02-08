@@ -42,7 +42,7 @@ lite-vimeo > iframe {
 }
 
 /* play button */
-lite-vimeo > .lty-playbtn {
+lite-vimeo > .ltv-playbtn {
 	width: 6.5em;
 	height: 4em;
 	background: rgba(23, 35, 34, 0.75);
@@ -55,8 +55,8 @@ lite-vimeo > .lty-playbtn {
 	cursor: pointer;
 }
 
-lite-vimeo:hover > .lty-playbtn,
-lite-vimeo .lty-playbtn:focus {
+lite-vimeo:hover > .ltv-playbtn,
+lite-vimeo .ltv-playbtn:focus {
 	background-color: rgb(0, 173, 239);
 	opacity: 1;
 }
@@ -78,16 +78,16 @@ lite-vimeo > .ltv-playbtn::before {
 }
 
 /* Post-click styles */
-lite-vimeo.lyt-activated {
+lite-vimeo.ltv-activated {
 	cursor: unset;
 }
-lite-vimeo.lyt-activated::before,
-lite-vimeo.lyt-activated > .lty-playbtn {
+lite-vimeo.ltv-activated::before,
+lite-vimeo.ltv-activated > .ltv-playbtn {
 	opacity: 0;
 	pointer-events: none;
 }
 
-.lyt-visually-hidden {
+.ltv-visually-hidden {
 	clip: rect(0 0 0 0);
 	clip-path: inset(50%);
 	height: 1px;

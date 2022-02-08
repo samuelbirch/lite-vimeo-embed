@@ -8,7 +8,7 @@ class LiteVimeoEmbed extends HTMLElement {
 	connectedCallback() {
 		this.videoId = this.getAttribute('videoid');
 
-		let playBtnEl = this.querySelector('.lty-playbtn');
+		let playBtnEl = this.querySelector('.ltv-playbtn');
 		// A label for the button takes priority over a [playlabel] attribute on the custom-element
 		this.playLabel = (playBtnEl && playBtnEl.textContent.trim()) || this.getAttribute('playlabel') || 'Play';
 
@@ -29,12 +29,12 @@ class LiteVimeoEmbed extends HTMLElement {
 		if (!playBtnEl) {
 			playBtnEl = document.createElement('button');
 			playBtnEl.type = 'button';
-			playBtnEl.classList.add('lty-playbtn');
+			playBtnEl.classList.add('ltv-playbtn');
 			this.append(playBtnEl);
 		}
 		if (!playBtnEl.textContent) {
 			const playBtnLabelEl = document.createElement('span');
-			playBtnLabelEl.className = 'lyt-visually-hidden';
+			playBtnLabelEl.className = 'ltv-visually-hidden';
 			playBtnLabelEl.textContent = this.playLabel;
 			playBtnEl.append(playBtnLabelEl);
 		}
@@ -86,9 +86,9 @@ class LiteVimeoEmbed extends HTMLElement {
 	}
 
 	addIframe(e) {
-		if (this.classList.contains('lyt-activated')) return;
+		if (this.classList.contains('ltv-activated')) return;
 		e.preventDefault();
-		this.classList.add('lyt-activated');
+		this.classList.add('ltv-activated');
 
 		const params = new URLSearchParams(this.getAttribute('params') || []);
 		params.append('autoplay', '1');
