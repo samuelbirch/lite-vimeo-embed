@@ -88,7 +88,7 @@ class LiteVimeoEmbed extends HTMLElement {
 	addIframe(e) {
 		if (this.classList.contains('ltv-activated')) return;
 		e.preventDefault();
-		this.classList.add('ltv-activated');
+		//this.classList.add('ltv-activated');
 
 		const params = new URLSearchParams(this.getAttribute('params') || []);
 		params.append('autoplay', '1');
@@ -103,7 +103,14 @@ class LiteVimeoEmbed extends HTMLElement {
 		// AFAIK, the encoding here isn't necessary for XSS, but we'll do it only because this is a URL
 		// https://stackoverflow.com/q/64959723/89484
 		iframeEl.src = `https://player.vimeo.com/video/${encodeURIComponent(this.videoId)}?${params.toString()}`;
-		this.append(iframeEl);
+
+		let target = this;
+		if (this.getAttribute('target')) {
+			target = document.querySelector(this.getAttribute('target'));
+		} else {
+			this.classList.add('ltv-activated');
+		}
+		target.append(iframeEl);
 
 		// Set focus for a11y
 		iframeEl.focus();
