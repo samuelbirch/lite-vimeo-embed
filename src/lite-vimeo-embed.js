@@ -8,6 +8,12 @@ class LiteVimeoEmbed extends HTMLElement {
 	connectedCallback() {
 		this.videoId = this.getAttribute('videoid');
 
+		var parts = this.videoId.split('/');
+		if (parts.length > 1) {
+			this.videoId = parts[0];
+			this.videoHash = parts[1];
+		}
+
 		let playBtnEl = this.querySelector('.ltv-playbtn');
 		// A label for the button takes priority over a [playlabel] attribute on the custom-element
 		this.playLabel = (playBtnEl && playBtnEl.textContent.trim()) || this.getAttribute('playlabel') || 'Play';
@@ -92,6 +98,9 @@ class LiteVimeoEmbed extends HTMLElement {
 
 		const params = new URLSearchParams(this.getAttribute('params') || []);
 		params.append('autoplay', '1');
+		if (this.videoHash) {
+			params.append('h', this.videoHash)
+		}
 
 		const iframeEl = document.createElement('iframe');
 		iframeEl.width = 560;
