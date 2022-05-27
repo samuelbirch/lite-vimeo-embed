@@ -8,7 +8,7 @@ class LiteVimeoEmbed extends HTMLElement {
 	connectedCallback() {
 		this.videoId = this.getAttribute('videoid');
 
-		var parts = this.videoId.split('/');
+		var parts = this.videoId?.split('/') ?? [];
 		if (parts.length > 1) {
 			this.videoId = parts[0];
 			this.videoHash = parts[1];
